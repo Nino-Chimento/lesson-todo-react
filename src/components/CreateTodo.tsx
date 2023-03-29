@@ -8,7 +8,7 @@ interface CreateTodoProps {
 export const CreateTodo = ({ addTodo }: CreateTodoProps) => {
   const [textTodo, setTextTodo] = useState('');
   const [completed, setCompleted] = useState(false);
-  console.log(completed);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTextTodo(e.target.value);
