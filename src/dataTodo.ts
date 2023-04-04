@@ -9,7 +9,7 @@ export const dataTodo:TodoProps[] = [
     },
     {
         id: Math.random(),
-        title: 'Learn typescriot',
+        title: 'Learn Typescript',
         completed: true
     }, {
         id: Math.random(),

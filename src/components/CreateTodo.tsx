@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 import { TodoProps } from '../models/TodoProps';
 
 interface CreateTodoProps {
@@ -8,7 +9,6 @@ interface CreateTodoProps {
 export const CreateTodo = ({ addTodo }: CreateTodoProps) => {
   const [textTodo, setTextTodo] = useState('');
   const [completed, setCompleted] = useState(false);
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTextTodo(e.target.value);
@@ -25,7 +25,7 @@ export const CreateTodo = ({ addTodo }: CreateTodoProps) => {
       completed: completed,
     };
     addTodo(newTodo);
-    setTextTodo("")
+    setTextTodo('');
   };
 
   return (
