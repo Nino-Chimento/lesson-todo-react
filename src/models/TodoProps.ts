@@ -6,3 +6,4 @@ export interface TodoProps {
 export interface Todo{
     todo:TodoProps
 }
+

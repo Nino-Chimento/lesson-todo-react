@@ -9,8 +9,7 @@ import { fetchTodos } from '../api/todosService';
 import { ThemeContext } from '../context/ThemeContext';
 import Button from '../components/Button';
 import { usePosition } from '../hooks/usePosition';
-import { Container } from '../components/Container';
-import { UserContext } from '../context/UserContext';
+
 
 export const TodosPage = () => {
   const [todos, setTodos] = useState<any>([]);
@@ -18,9 +17,8 @@ export const TodosPage = () => {
     {}
   );
 
-  const { position, error } = usePosition();
-  console.log(position);
-  
+
+
 
   useEffect(() => {
     fetchTodos().then((result) => {
@@ -65,6 +63,7 @@ export const TodosPage = () => {
     });
     setTodos(newTodos);
   };
+  
   const [theme, setTheme] = useState('light');
 
   return (
