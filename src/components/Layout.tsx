@@ -16,6 +16,7 @@ export const Layout = () => {
 
     return <Container>
         <Menu />
+      
         {!getUser() &&
             <Login />}
         {getUser() &&

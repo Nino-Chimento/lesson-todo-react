@@ -13,6 +13,7 @@ export const AboutPage: FC<AboutPageProps> = ({ isTrue }) => {
 
     const handleClick = () => {
         navigate("/")
+        
     }
 
     return <button onClick={handleClick}>Go to home</button>
